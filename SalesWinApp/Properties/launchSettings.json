@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SalesWinApp": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
