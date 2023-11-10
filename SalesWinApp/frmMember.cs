@@ -29,7 +29,7 @@ namespace SalesWinApp
             txtCity.Enabled = false;
             txtCountry.Enabled = false;
 
-            if (loggedInMember.Email == ("admin@fstore.com"))
+            if (loggedInMember.Email == ("admin@estore.com"))
             {
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
@@ -44,7 +44,7 @@ namespace SalesWinApp
                 List<MemberObject> members = memberRepository.GetMembers();
                 foreach (MemberObject member in members)
                 {
-                    if (member.Email == "admin@fstore.com")
+                    if (member.Email == "admin@estore.com")
                     {
                         members.Remove(member);
                         break;
@@ -83,7 +83,7 @@ namespace SalesWinApp
             MemberObject member = memberRepository.GetMemberById(memberId);
             frmUpdateMember frmUpdateMember = new frmUpdateMember(member);
             frmUpdateMember.ShowDialog();
-            if (loggedInMember.Email != ("admin@fstore.com"))
+            if (loggedInMember.Email != ("admin@estore.com"))
             {
                 loggedInMember = memberRepository.GetMemberById(memberId);
             }

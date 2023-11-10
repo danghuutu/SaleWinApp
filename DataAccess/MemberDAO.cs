@@ -22,7 +22,7 @@ namespace DataAccess
                             .SetBasePath(Directory.GetCurrentDirectory())
                             .AddJsonFile("appsettings.json", true, true)
                             .Build();
-            string strConnection = config["ConnectionStrings:FStoreDB"];
+            string strConnection = config["ConnectionStrings:eStoreDB"];
             return strConnection;
 
         }
@@ -44,8 +44,7 @@ namespace DataAccess
             SqlConnection connection = GetConnection();
             connection.Open();
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "SELECT MemberId, Email, CompanyName, City, Country, Password " +
-                "FROM Member WHERE Email = @email ";
+            sqlCommand.CommandText = "SELECT * FROM Member WHERE Email = @email ";
             sqlCommand.Parameters.AddWithValue("@email", email);
             sqlCommand.Connection = connection;
             using DbDataReader dbDataReader = sqlCommand.ExecuteReader();

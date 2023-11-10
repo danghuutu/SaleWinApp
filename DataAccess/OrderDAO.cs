@@ -19,7 +19,7 @@ namespace DataAccess
                             .SetBasePath(Directory.GetCurrentDirectory())
                             .AddJsonFile("appsettings.json", true, true)
                             .Build();
-            string strConnection = config["ConnectionStrings:FStoreDB"];
+            string strConnection = config["ConnectionStrings:eStoreDB"];
             return strConnection;
         }
         public SqlConnection GetConnection()

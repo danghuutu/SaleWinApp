@@ -100,6 +100,7 @@
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Location = new Point(214, 169);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(203, 27);
             txtPassword.TabIndex = 1;
             // 
