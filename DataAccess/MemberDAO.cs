@@ -117,7 +117,7 @@ namespace DataAccess
             SqlConnection connection = GetConnection();
             connection.Open();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT MemberId, Email, CompanyName, City, Country, Password " +
+            command.CommandText = "SELECT MemberId, Email, CompanyName, City, Country " +
                 "FROM Member ";
             command.Connection = connection;
             DbDataReader dbDataReader = command.ExecuteReader();
